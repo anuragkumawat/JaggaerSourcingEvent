@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Sourcing Events</title>
+<link href="/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+	<div class="wrap">
+		<div class="container">
+			<div class="row">
+					<div id="content" class="w-100">
+					  <div class="w-100">
+						<div class="float-left"><h1>Sourcing Events</h1></div>
+						<div class="float-right"><img 
+							src="https://ssl.doas.state.ga.us/gpr/images/georgia_logo.png"
+							alt="Georgia Department of Administrative Services"></div>
+					  </div>
+					  <div class="w-100 float-left">		
+					  	<tr th:each="sourcingEvent : ${sourcingEvents}">
+ 								<div class="w-100 float-left m-2">
+ 								<a th:href="${'/sourcing-event/' + sourcingEvent.jagEventStagingPK}"><span th:text="${sourcingEvent.jagEventStagingPK}"><i class="fa fa-chevron-right"></i></span></a>
+									
+								</div>
+
+							</div>
+							
+					  	</tr>
+					  </div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer id="footer">
+		<div class="text-center text-muted"></div>
+	</footer>
+
+
+
+
+</body>
+</html>
